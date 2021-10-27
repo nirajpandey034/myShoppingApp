@@ -1,0 +1,17 @@
+.site-header-list {
+    display:flex;
+    justify-content:center;
+    padding: 10px;
+    background-color:pink;
+}
+
+#header-item {
+    margin-left: 5px;
+    margin-right: 5px;
+    text-decoration: none;
+    color:rgb(72, 72, 182)
+}
+
+#header-item:hover{
+    text-shadow: 2px 2px 5px red;
+}
