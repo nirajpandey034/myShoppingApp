@@ -59,7 +59,7 @@ function CartModal(props) {
                 </p>
               </div>
 
-              <button onClick={() => alert("Payment window will open here")}>
+              <button onClick={() => alert("Payment window will open here")} style={{margin:"3px"}}>
                 Proceed to Checkout
               </button>
               <button
@@ -67,13 +67,18 @@ function CartModal(props) {
                   props.clearCart();
                   props.closeCart();
                 }}
+                style={{margin:"3px"}}
               >
                 Clear Cart
               </button>
-              <button onClick={() => props.closeCart()}>Exit</button>
+              <br />
+              <button onClick={() => props.closeCart()} style={{margin:"3px"}}>Exit</button>
             </>
           ) : (
-            <button onClick={() => props.closeCart()}>Exit</button>
+            <>
+            <br />
+            <button onClick={() => props.closeCart()} style={{margin:"3px"}}>Exit</button>
+            </>
           )}
         </div>
       </div>

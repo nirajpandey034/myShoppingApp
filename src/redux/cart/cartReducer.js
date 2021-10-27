@@ -1,4 +1,4 @@
-import { ADD_TO_CART, CLEAR_CART } from "./cartType";
+import { ADD_TO_CART, CLEAR_CART,REMOVE_FROM_CART } from "./cartType";
 
 const initialState = {
   prods: [],
@@ -31,6 +31,17 @@ export const cartReducer = (state = initialState, action) => {
         prods: [],
         totalPrice: 0,
       };
+    case REMOVE_FROM_CART:
+      let objIndex = state.prods.findIndex(o => o.name === action.payload.name);
+      let newProds = [...state.prods]
+      newProds[objIndex].quantity -= 1
+      if(newProds[objIndex].quantity === 0)
+        newProds.splice(objIndex,1)
+      return {
+          ...state,
+          prods:newProds,
+          totalPrice: Number(state.totalPrice) - Number(action.payload.price),
+      }
     default:
       return state;
   }
