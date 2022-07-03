@@ -52,7 +52,7 @@ function CartModal(props) {
             <>
               <div style={{ display: "flex" }}>
                 <p style={{ marginRight: "auto" }}>
-                  <strong>Sub Total:</strong>
+                  <strong>Gross Total (Incl. GST):</strong>
                 </p>
                 <p style={{ marginLeft: "auto" }}>
                   <strong>Rs.{props.totalPrice}</strong>
